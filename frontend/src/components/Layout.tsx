@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageUrl } from "utils";
 import { Home, User, Code, Briefcase, Mail } from "lucide-react";
 
 const navigationItems = [

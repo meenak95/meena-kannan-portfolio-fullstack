@@ -32,8 +32,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/meena-por
     console.log('✅ Connected to MongoDB');
   })
   .catch((error) => {
-    console.error('❌ MongoDB connection error:', error);
-    process.exit(1);
+    console.error('❌ MongoDB connection error (continuing without DB):', error.message || error);
   });
 
 // Routes
@@ -51,8 +50,8 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
+// 404 handler (Express 5-compatible)
+app.use((req, res) => {
   res.status(404).json({
     status: 'error',
     message: 'Route not found'
