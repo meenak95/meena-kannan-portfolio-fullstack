@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardHeader, CardTitle } from "components/ui/card";
+import { Progress } from "components/ui/progress";
+import { Badge } from "components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "components/ui/tabs";
 import { 
   Code, 
   Globe, 
@@ -180,7 +180,7 @@ export default function Skills() {
         </Card>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in-up {
           from {
             opacity: 0;
